@@ -4,4 +4,4 @@
 2) _server_ program that responds to the _bot's_ query
 3) _Command & Control_ that registers _bot_ client
 
-The full description can be found in the desc file. Use Makefile to build and execute programs
+The full description can be found in the desc file. Use Makefile to build and execute programs.
