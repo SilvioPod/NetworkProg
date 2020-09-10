@@ -288,11 +288,6 @@ static void serving_client(struct sockaddr_in client, struct rrqRequest rrq) {
 	make_data_packet(ack, buffer, data);
 	Sendto(childSocket, data, n+4, 0, (struct sockaddr *)&client, velicina);
 	
-	/*
-	 * UGRADI RETRANSMISSION (kao funkcija od ovog gore) + STAVI PROVJERU ZADNJEG ACK
-	 */
-	
-	
 	
 	fclose(openFile);
 	close(childSocket);
