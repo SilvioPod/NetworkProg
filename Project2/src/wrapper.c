@@ -133,11 +133,10 @@ int Accept( int sockfd,
 		return greska;
 		
 }
-//NAP: vraća descriptor novog socketa koji koristimo u read() i write()
 
 
 ///////////////////////
-/*       client     */
+/*       CLIENT     */
 //////////////////////
 
 
@@ -155,7 +154,7 @@ int Connect(int sockfd,
 }
 
 
-//vraca broj procitanih oktetA, 0 ako EOF, -1 ERR
+//0 EOF, -1 ERR
 int Read(int fd, 	
 		char *buf, 
 		int max) {
