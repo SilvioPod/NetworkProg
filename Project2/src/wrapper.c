@@ -43,7 +43,7 @@ int Getaddrinfo(const char *node,
 			return greska;
 }
 
-//-1 ERR, inače broj bajtova
+//-1 ERR
 ssize_t Sendto(int sockfd, 	
 		const void *buf, 	
 		size_t len, 
@@ -62,7 +62,7 @@ ssize_t Sendto(int sockfd,
 		
 
 
-//-1 ERR, inače broj bajtova
+//-1 ERR
 ssize_t Recvfrom(int sockfd, 
  		 void *buf, 
   		 size_t len, 
@@ -80,12 +80,10 @@ ssize_t Recvfrom(int sockfd,
 }			 
 
 
-////////////////
-//TCP FUNKCIJE//
-////////////////
+/////////////////
+//TCP FUNCTIONS//
+/////////////////
 
-
-//vraca socket descriptor ak nije greska
 int Socket(int domain, 		//PF_INET !!
 	    int type, 		
 	    int protocol) {
@@ -139,7 +137,7 @@ int Accept( int sockfd,
 
 
 ///////////////////////
-/* KLIJENT */
+/*       client     */
 //////////////////////
 
 
@@ -157,7 +155,7 @@ int Connect(int sockfd,
 }
 
 
-//vraca broj procitanih oktete, 0 ako EOF, -1 ERR
+//vraca broj procitanih oktetA, 0 ako EOF, -1 ERR
 int Read(int fd, 	
 		char *buf, 
 		int max) {
@@ -169,7 +167,7 @@ int Read(int fd,
 		
 		return greska;
 }
-//NAP: UVIJEK PROVJERAVAJ KOLIKO SMO PODATAKA PROČITALI
+
 
 
 
@@ -187,7 +185,7 @@ ssize_t Recv(int s,
 }
 
 
-//vraca broj zapisanih okteta, -1 ako ERR
+//
 int Write(int fd, 
 		char *buf, 
 		int num) {
@@ -216,7 +214,7 @@ ssize_t Send(int s,
 
 
 /////////////////////
-//VEZANO ZA SOCKETE//
+//     SOCKETS     //
 /////////////////////
 
 //0 SUCC
@@ -247,7 +245,7 @@ int Getsockopt(int sockfd,
 }
 
 
-//NULL ako ERR -> bez provjere greske
+//NULL ako ERR
 const char *Inet_ntop(int af, 
 		      const void *src,			
               char *dst, 				
@@ -265,12 +263,6 @@ int Inet_pton(int af,
 		
 		return greska;
 }
-
-
-////////////////////////////
-//READN I WRITEN FUNKCIJE // -> ZA TCP
-////////////////////////////
-
 
 
 
